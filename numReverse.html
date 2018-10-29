@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+    <meta charset= "utf-8">
+    <script>
+
+        function numReverse(num) {
+            var num = document.getElementById( 'mynum' ).value;
+            let revNum = 0;
+
+            while (num > 0) {
+                revNum = revNum * 10;
+                revNum = revNum + num % 10;
+                num = num - num % 10;
+                num = num/10;
+            }
+
+            alert(revNum);
+        }
+    </script>
+</head>
+<body>
+        Enter a number:
+        <input type="number" id="mynum" value="" />
+        <button onClick="numReverse()" >Reverse</button>
+</body>
+</html>

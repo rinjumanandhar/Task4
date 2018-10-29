@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Letter Uppercase</title>
+    <meta charset= "utf-8">
+    <script>
+        function capitalFirst(word) {
+            var word = document.getElementById( 'mystring' ).value;
+            var firstChar = word.charCodeAt(0);
+            if (firstChar >= 97 && firstChar <= 122) {
+                document.write(String.fromCharCode(firstChar - 32) + word.substr(1));
+            }
+            else{
+                document.write(word);
+            }
+        }    
+    </script>
+</head>
+<body>
+        Enter word:
+        <input type="text" id="mystring" value="" />
+        <button id="btn" onClick="capitalFirst()" >Capitalize</button>
+</body>
+</html>
