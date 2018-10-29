@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome</title>
+    <meta charset= "utf-8">
+    <script>
+
+            function palindromecheck( str ){
+                var str = document.getElementById( 'mystring' ).value;
+                let newString = "";
+                for (let i = str.length - 1; i >= 0; i--) { 
+                    newString += str[i]; 
+                }
+                if(newString=== str){
+                    alert(str+ " is Palindrome");
+                }
+                  
+                else{
+                    alert(str+ " is Not Palindrome");
+                }
+                   
+            }    
+        </script>
+</head>
+<body>
+        Mystring:
+        <input type="text" id="mystring" value="" />
+        <button id="btn" onClick="palindromecheck()" >Is Palindrome?</button>
+</body>
+</html>
