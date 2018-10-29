@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse String</title>
+    <meta charset= "utf-8">
+    <script>
+
+            function reverse(){
+                let str = document.getElementById( 'mystring' ).value;
+                let newString = "";
+                for (let i = str.length - 1; i >= 0; i--) { 
+                    newString += str[i]; 
+                }
+                alert( "The reverse of " + str+ " is " + newString); 
+            }    
+        </script>
+</head>
+<body>
+        Mystring:
+        <input type="text" id="mystring" value="" />
+        <button id="btn" onClick="reverse()" >Reverse</button>
+</body>
+</html>
