@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function maxString(){
+            let str = document.getElementById( 'mystring' ).value;
+            var strcount = {};
+            var maxStr = '';
+            for(var i = 0; i < str.length; i++)
+            {
+                var key = str[i];
+                if(!strcount[key]){
+                    strcount[key] = 0;
+                }
+                strcount[key]++;
+                if(maxStr == '' || strcount[key] > strcount[maxStr]){
+                    maxStr = key;
+                }   
+            }
+            alert(maxStr + "=" + strcount[maxStr]);
+        }
+    </script>
+</head>
+<body>
+        Mystring:
+        <input type="text" id="mystring" value="javascript" />
+        <button id="btn" onClick="maxString()" >Max Occurence</button>
+    
+</body>
+</html>
